@@ -60,6 +60,9 @@ group :development do
   gem 'rubocop-rails', require: false
 end
 
+# webpack
+gem 'webpacker', '~> 5.0'
+
 # psych
 gem 'psych', '~> 3.1'
 
