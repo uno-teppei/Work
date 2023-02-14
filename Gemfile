@@ -66,3 +66,6 @@ gem 'psych', '~> 3.1'
 # Bulma
 gem 'bulma-rails', '~> 0.9.4'
 gem 'bulma-extensions-rails', '~> 1.0.30'
+
+#デバイス
+gem 'devise'
