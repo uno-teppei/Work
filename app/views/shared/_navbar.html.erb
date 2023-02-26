@@ -10,22 +10,24 @@
     </a>
   </div>
   <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navber-end">
+    <div class="navbar-start">
+      <div class="navbar-item">
+      </div>
+    </div>
+    <div class="navbar-end">
       <a class="navbar-item"></a>
       <a class="navbar-item"></a>
-
       <!-- もしログインしていなかったら-->
       <% if (!user_signed_in?) %>
-        <div class="navber-item">
+        <div class="navbar-item">
           <div class="buttons">
-            <%= link_to  "新規ユーザ登録", new_user_registration_path, class: "button-white" %>
-            <%= link_to  "ログイン", new_user_session_path, class: "button-white" %>
+            <%= link_to  "新規ユーザ登録", new_user_registration_path, class: "button is-white" %>
+            <%= link_to  "ログイン", new_user_session_path, class: "button is-white" %>
           </div>
         </div>
-
-      <!-- ログインしていたら-->
+      <!-- ログインしていたら　-->
       <% else %>
-        <div class="navbar-item-dropdown" style="margin-right: 100px;">
+        <div class="navbar-item has-dropdown is-hoverable" style="margin-right: 100px;">
           <a class="navbar-item"><%= current_user.email %></a>
           <div class="navbar-dropdown">
             <a href="" class="navbar-item"></a>
@@ -34,11 +36,10 @@
             <%= link_to  "ログアウト", destroy_user_session_path, method: :delete, class: "navbar-item" %>
           </div>
         </div>
-      <% end %>
+      <% end %>            
     </div>
   </div>
 </nav>
-
 <script>
 $(document).ready(function() {
   // navbar burgerアイコンでクリックイベントを確認する
