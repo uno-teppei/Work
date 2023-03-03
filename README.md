@@ -1,24 +1,11 @@
-# README
+# Go Airport
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サービス概要
+気軽に自分の好きな空港の魅力をPRすることができるサービスです。
 
-Things you may want to cover:
+## 作成に至った背景
+主に２つあります。
 
-* Ruby version
+１.私自身空港の雰囲気が好きで友人にも同じく雰囲気が好きで空港巡りをしている方がおり、同じ趣味を持っている方がたくさんいらっしゃるのではと思いそのような方々が事前に情報収集できればと考え作成しました。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+２.旅行などで遠距離移動をすることがあるかと思います。その際に微妙に時間が余ってしまった時に空港で過ごして頂きただければと思い作成しました。
