@@ -59,10 +59,16 @@ GEM
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
+    autoprefixer-rails (10.4.13.0)
+      execjs (~> 2)
     bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
+    bootstrap (5.2.3)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 2.11.6, < 3)
+      sassc-rails (>= 2.0.0)
     builder (3.2.4)
     bulma-extensions-rails (1.0.30)
     bulma-rails (0.9.4)
@@ -86,7 +92,9 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-bootstrap-views (1.1.0)
     erubi (1.12.0)
+    execjs (2.8.1)
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
@@ -130,6 +138,7 @@ GEM
     parser (3.2.0.0)
       ast (~> 2.4.1)
     pg (1.4.5)
+    popper_js (2.11.6)
     psych (3.3.4)
     public_suffix (5.0.1)
     puma (4.3.12)
@@ -262,11 +271,13 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
+  bootstrap (~> 5.2.3)
   bulma-extensions-rails (~> 1.0.30)
   bulma-rails (~> 0.9.4)
   byebug
   capybara (>= 2.15)
   devise
+  devise-bootstrap-views (~> 1.0)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)

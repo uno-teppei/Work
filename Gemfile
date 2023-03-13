@@ -63,6 +63,10 @@ end
 # psych
 gem 'psych', '~> 3.1'
 
+# Bootstrap
+gem 'bootstrap', '~> 5.2.3'
+gem 'devise-bootstrap-views', '~> 1.0'
+
 # Bulma
 gem 'bulma-rails', '~> 0.9.4'
 gem 'bulma-extensions-rails', '~> 1.0.30'
