@@ -7,3 +7,24 @@
 .field-button {
   text-align: center;
 }
+
+.btn {
+  width: 130px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 15px;
+  color: #000;
+  background-color: #00ff3c;
+  border-bottom: 5px solid #44cc00;
+}
+
+.btn:hover {
+  margin-top: 3px;
+  color: #000;
+  background: #0aff60;
+  border-bottom: 2px solid #00cc33;
+}
+
+.field-link {
+  text-align: center;
+}

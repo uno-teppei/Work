@@ -35,10 +35,12 @@
             <%= f.password_field :current_password, autocomplete: "current-password", class: "input" %>
           </div>
           <div class="field-button">
-            <%= f.submit "更新する", class: "button" %>
+            <%= f.submit "更新する", class: "btn" %>
           </div>
         <% end %>
-        <%= link_to "戻る", :back, class: "link" %>
+        <div class="field-link">
+          <%= link_to "戻る", :back, class: "link" %>
+        </div>  
       </div>
     </div>
   </div>
