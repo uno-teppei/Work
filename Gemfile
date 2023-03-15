@@ -69,3 +69,6 @@ gem 'bulma-extensions-rails', '~> 1.0.30'
 
 #デバイス
 gem 'devise'
+
+#日本語化
+gem 'rails-i18n'
