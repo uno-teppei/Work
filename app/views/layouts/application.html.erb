@@ -14,8 +14,9 @@
     <!-- ナビゲーション -->
     <%= render  "shared/navbar" %>
     
-    <!-- noty -->
-    <%= render 'shared/notification' %>
+    <!-- フラッシュメッセージ -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
     <%= yield %>
     
