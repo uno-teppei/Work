@@ -2,9 +2,6 @@
 <div class="all-link">
   <%- if controller_name != 'sessions' %>
     ユーザ登録がお済みの方は<%= link_to "ログイン", new_session_path(resource_name) %>してください。<br />
-    <br/>
-    <p>登録ボタンを押すとメールが送信されます。</p>
-    <p>メールに記載されているリンクをクリックするとアカウントが有効化されます。</p>
   <% end %>
 
   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
