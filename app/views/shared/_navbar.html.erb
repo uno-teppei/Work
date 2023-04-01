@@ -40,6 +40,24 @@
     </div>
   </div>
 </nav>
+
+<% if (user_signed_in?) %>
+  <nav class="navbar has-shadow" style="z-index: 3;">
+    <div class="container">
+      <div class="navbar">
+        <%= link_to 'プロフィール', profile_path, class: "navbar-item" %>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">投稿する</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item"></a>
+            <a class="navbar-item"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+<% end %>
+
 <script>
 $(document).ready(function() {
   // navbar burgerアイコンでクリックイベントを確認する

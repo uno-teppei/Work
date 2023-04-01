@@ -8,5 +8,7 @@ Rails.application.routes.draw do
               controllers: {registrations: 'registrations'}
 
   get 'pages/home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/profile', to: 'users#profile'
+  
+  post '/users/edit', to: 'users#update'
 end
