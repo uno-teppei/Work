@@ -1,2 +1,79 @@
-<h1>Users#profile</h1>
-<p>Find me in app/views/users/profile.html.erb</p>
+<section class="section">
+  <div class="container">
+    <div class="column is-one-third">
+      <div class="contents is-multiline">
+        <div class="content is-full">
+          <div class="card">
+            <!-- 画像 -->
+            <div class="card-content">
+              <figure class="image is-256x256">
+                <%= image_tag 'icon_default_avatar.jpg' %>
+              </figure>
+              <!-- 画像アップロードボタン -->
+              <div class="image-content">
+                <p class="image-name">
+                  <%= current_user.full_name %>
+                </p>
+                <button class="image-button is-info is-light is-fullwidth">画像アップロード</button>
+                <hr class="line">
+              </div>
+              <!-- アカウント情報 -->
+              <article class="media">
+                <div class="media-content">アカウント登録日</div>
+                <div class="media-right">
+                  <strong><%= I18n.l(current_user.created_at, format: :full_date) %></strong>
+                </div>
+              </article>
+              <hr class="line">
+              <!-- オンラインステータス -->
+              <article class="media">
+                <div class="media-content">ステータス</div>
+                <div class="media-right">
+                  <strong><% if current_user.status %> オンライン <% else %> オフライン <% end %></strong><i class="toggle fa-thin fa-globe" aria-controls="user-status"></i>
+                </div>
+                <div class="online-content">
+                  <%= form_with model: @user, url: users_edit_url(@user), action: :update, method: :post, id: 'user-status', class: 'is-hidden', local: true do |f| %>
+                    <div class="field">
+                      <%= f.select(:status, options_for_select([["オンライン", true], ["オフライン", false]]), {class: "select is-fullwidth"}) %>
+                    </div>
+                    <a class="toggle online-button is-danger is-outlined " aria-controls="user-status">キャンセル</a>
+                    <%= f.submit "保存", class: "save-button is-success" %>
+                  <% end %>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="content is-full">
+          <div class="card">
+            <div class="card-content">
+              <!-- アカウント詳細 -->
+              <article class="media">
+                <div class="media-content">
+                  <p>
+                    <strong>自己紹介</strong>
+                    <br>
+                    <%= current_uesr.about %>
+                  </p>
+                </div>
+                <div class="media-right">
+                  <i class="toggle far fa-edit" aria-controls="user-about"></i>
+                </div>
+                <div class="user-content">
+                  <%= form_with model: @user, url: users_edit_url(@user), action: :update, method: :post, id: 'user-about', class: 'is-hidden', local: true do |f| %>
+                    <div class="field">
+                      <%= f.text_area :about, autofocus: true, autocomplete: 'form', class: 'input'%>
+                    </div>
+                    <a class="toggle user-button is-danger is-outlined" aria-controls="user-about">キャンセル</a>
+                    <%= f.submit "保存", class: "save-button is-success" %>
+                  <% end %>
+                </div>
+              </article>
+              <hr class="line">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
