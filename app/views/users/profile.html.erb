@@ -14,7 +14,7 @@
                 <p class="image-name">
                   <%= current_user.full_name %>
                 </p>
-                <button class="image-button is-info is-light is-fullwidth">画像アップロード</button>
+                <button class="button is-info is-light is-fullwidth">画像アップロード</button>
                 <hr class="line">
               </div>
               <!-- アカウント情報 -->
@@ -36,8 +36,8 @@
                     <div class="field">
                       <%= f.select(:status, options_for_select([["オンライン", true], ["オフライン", false]]), {class: "select is-fullwidth"}) %>
                     </div>
-                    <a class="toggle online-button is-danger is-outlined " aria-controls="user-status">キャンセル</a>
-                    <%= f.submit "保存", class: "save-button is-success" %>
+                    <a class="toggle button is-danger is-outlined " aria-controls="user-status">キャンセル</a>
+                    <%= f.submit "保存", class: "button is-success" %>
                   <% end %>
                 </div>
               </article>
@@ -64,8 +64,8 @@
                     <div class="field">
                       <%= f.text_area :about, autofocus: true, autocomplete: 'form', class: 'input'%>
                     </div>
-                    <a class="toggle user-button is-danger is-outlined" aria-controls="user-about">キャンセル</a>
-                    <%= f.submit "保存", class: "save-button is-success" %>
+                    <a class="toggle button is-danger is-outlined" aria-controls="user-about">キャンセル</a>
+                    <%= f.submit "保存", class: "button is-success" %>
                   <% end %>
                 </div>
               </article>
