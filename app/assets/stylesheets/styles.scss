@@ -58,6 +58,19 @@
   text-align: center;
 }
 
+#error_explanation {
+  text-align: center;
+  background-color: red;
+}
+
+#error_explanation h2 {
+  color: white;
+}
+
+#error_explanation li {
+  color: white;
+}
+
 //googleフォント
 .title {
   font-family: 'Noto Sans JP', sans-serif;
