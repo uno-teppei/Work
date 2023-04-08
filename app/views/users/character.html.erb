@@ -29,7 +29,7 @@
               <article class="media">
                 <div class="media-content">ステータス</div>
                 <div class="media-right">
-                  <strong><% if current_user.status %> オンライン <% else %> オフライン <% end %></strong><i class="toggle fa-thin fa-globe" aria-controls="user-status"></i>
+                  <strong><% if current_user.status %> オンライン <% else %> オフライン <% end %></strong><i class="toggle fas fa-globe" aria-controls="user-status"></i>
                 </div>
                 <div class="online-content">
                   <%= form_with model: @user, url: users_edit_url(@user), action: :update, method: :post, id: 'user-status', class: 'is-hidden', local: true do |f| %>
