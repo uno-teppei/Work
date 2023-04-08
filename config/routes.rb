@@ -8,7 +8,7 @@ Rails.application.routes.draw do
               controllers: {registrations: 'registrations'}
 
   get 'pages/home'
-  get '/profile', to: 'users#profile'
-  
+  get '/character', to: 'users#character'
+
   post '/users/edit', to: 'users#update'
 end

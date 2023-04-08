@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
 
-  def profile
+  def character
   end
 
   def update
@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     else
       flash[:alert] = "更新できません"
     end
-    redirect_to profile_path
+    redirect_to character_path
   end
 
   private
