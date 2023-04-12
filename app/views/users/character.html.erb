@@ -6,7 +6,7 @@
           <!-- 画像 -->
           <div class="card-content is-horizontal-center is-flex">
             <figure class="image is-256x256">
-              <%= image_tag 'icon_default_avatar.jpg' %>
+              <%= image_tag avatar_url(current_user), class: "is-rounded" %>
             </figure>
           </div>
           <!-- 画像アップロードボタン -->
@@ -14,7 +14,14 @@
             <p class="image-name">
               <%= current_user.full_name %>
             </p>
-            <button class="button is-info is-light is-fullwidth">画像アップロード</button>
+            <%= form_with model: @user, url: users_edit_url(@user), action: :update, method: :post, local: true do |f| %>
+              <div class="file">
+                <label class="button is-info is-light is-fullwidth">
+                  <%= f.file_field :avatar, class: "file-input", onchange: "this.form.submit();" %>
+                    <i class="fas fa-upload"></i>&nbsp;&nbsp;&nbsp; 画像アップロード
+                </label>
+              </div>
+            <% end %>
             <hr class="line">
           </div>
           <!-- アカウント情報 -->
