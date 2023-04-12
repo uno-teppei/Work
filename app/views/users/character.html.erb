@@ -3,46 +3,44 @@
     <div class="column is-one-third">
       <div class="contents is-multiline">
         <div class="content is-full">
-          <div class="card">
-            <!-- 画像 -->
-            <div class="card-content">
-              <figure class="image is-256x256">
-                <%= image_tag 'icon_default_avatar.jpg' %>
-              </figure>
-              <!-- 画像アップロードボタン -->
-              <div class="image-content">
-                <p class="image-name">
-                  <%= current_user.full_name %>
-                </p>
-                <button class="button is-info is-light is-fullwidth">画像アップロード</button>
-                <hr class="line">
-              </div>
-              <!-- アカウント情報 -->
-              <article class="media">
-                <div class="media-content">アカウント登録日</div>
-                <div class="media-right">
-                  <strong><%= I18n.l(current_user.created_at, format: :full_date) %></strong>
-                </div>
-              </article>
-              <hr class="line">
-              <!-- オンラインステータス -->
-              <article class="media">
-                <div class="media-content">ステータス</div>
-                <div class="media-right">
-                  <strong><% if current_user.status %> オンライン <% else %> オフライン <% end %></strong><i class="toggle fas fa-globe" aria-controls="user-status"></i>
-                </div>
-                <div class="online-content">
-                  <%= form_with model: @user, url: users_edit_url(@user), action: :update, method: :post, id: 'user-status', class: 'is-hidden', local: true do |f| %>
-                    <div class="field">
-                      <%= f.select(:status, options_for_select([["オンライン", true], ["オフライン", false]]), {class: "select is-fullwidth"}) %>
-                    </div>
-                    <a class="toggle button is-danger is-outlined " aria-controls="user-status">キャンセル</a>
-                    <%= f.submit "保存", class: "button is-success" %>
-                  <% end %>
-                </div>
-              </article>
-            </div>
+          <!-- 画像 -->
+          <div class="card-content is-horizontal-center is-flex">
+            <figure class="image is-256x256">
+              <%= image_tag 'icon_default_avatar.jpg' %>
+            </figure>
           </div>
+          <!-- 画像アップロードボタン -->
+          <div class="image-content has-text-centered">
+            <p class="image-name">
+              <%= current_user.full_name %>
+            </p>
+            <button class="button is-info is-light is-fullwidth">画像アップロード</button>
+            <hr class="line">
+          </div>
+          <!-- アカウント情報 -->
+          <article class="media">
+            <div class="media-content">アカウント登録日</div>
+            <div class="media-right">
+              <strong><%= I18n.l(current_user.created_at, format: :full_date) %></strong>
+            </div>
+          </article>
+          <hr class="line">
+          <!-- オンラインステータス -->
+          <article class="media">
+            <div class="media-content">ステータス</div>
+            <div class="media-right">
+              <strong><% if current_user.status %> オンライン <% else %> オフライン <% end %></strong><i class="toggle fas fa-globe" aria-controls="user-status"></i>
+            </div>
+            <div class="online-content">
+              <%= form_with model: @user, url: users_edit_url(@user), action: :update, method: :post, id: 'user-status', class: 'is-hidden', local: true do |f| %>
+                <div class="field">
+                  <%= f.select(:status, options_for_select([["オンライン", true], ["オフライン", false]]), {class: "select is-fullwidth"}) %>
+                </div>
+                <a class="toggle button is-danger is-outlined " aria-controls="user-status">キャンセル</a>
+                <%= f.submit "保存", class: "button is-success" %>
+              <% end %>
+            </div>
+          </article>
         </div>
         <div class="content is-full">
           <div class="card">
