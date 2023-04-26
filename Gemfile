@@ -75,3 +75,6 @@ gem 'rails-i18n'
 
 #環境変数
 gem 'dotenv-rails'
+
+#画像アップロード
+gem 'carrierwave', '2.2.3'
