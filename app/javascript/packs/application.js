@@ -7,7 +7,6 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require("jquery")
 
 $(document).ready(() => {
   $('.toggle').on('click', (e) => {
