@@ -22,7 +22,7 @@
       </div>
       <div class="post">
         <%= f.label :image, "空港画像", class:"bold" %><br>
-        <%= f.file_field :image, class:"input" %>
+        <%= f.file_field :image, multiple: true, class:"input" %>
       </div>
       <div class="post">
         <%= f.submit "投稿する", class: "post-button" %>
