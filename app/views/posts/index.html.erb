@@ -8,5 +8,16 @@
       <th>市名</th>
       <th>コメント</th>
     </thead>
+    <tbody class="post-info">
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= image_tag (post.url) %></td>
+          <td><%= post.airport_name %></td>
+          <td><%= post.prefecture %></td>
+          <td><%= post.city %></td>
+          <td><%= post.impression %></td>
+        </tr>
+      <% end %>
+    </tbody>
   </table>
 </section>
