@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'posts/index'
-  get 'posts/new'
-  get 'posts/create'
-  get 'posts/show'
   root 'pages#home'
   
   devise_for :users,
@@ -16,4 +12,6 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'users#show', as: 'user'
 
   post '/users/edit', to: 'users#update'
+
+  resources :posts
 end

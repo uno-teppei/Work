@@ -54,11 +54,10 @@
       <div class="navbar">
         <%= link_to 'プロフィール', character_path, class: "navbar-item has-text-danger" %>
         <div class="navbar-item has-dropdown is-hoverable">
-          <%= link_to "投稿する", new_post_path, class: "navbar-item" %>
-          <%= link_to "投稿一覧", posts_path, class: "navbar-item" %>
+          <a class="navbar-link">投稿関連</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item"></a>
-            <a class="navbar-item"></a>
+            <%= link_to "投稿する", new_post_path, class: "navbar-item" %>
+            <%= link_to "投稿一覧", posts_path, class: "navbar-item" %>
           </div>
         </div>
       </div>
