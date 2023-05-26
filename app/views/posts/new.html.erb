@@ -1,8 +1,9 @@
 <section class="section">
   <div class="post-container">
     <h2>空港情報投稿</h2>
-
-    <%= form_with model: @post, url: posts_path do |f| %>
+  
+    <%= form_with model: @post, url: posts_path, local: true do |f| %>
+      <%= render 'layouts/error_messages', model: f.object %>
       <%= f.hidden_field :user_id, value: current_user.id %>
       <div class="post">
         <%= f.label :airport_name, "空港名", class:"bold" %><p class="required">(必須)</p><br>

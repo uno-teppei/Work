@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       user: "ユーザー"
+      post: "投稿"
     attributes:
       user:
         full_name: 氏名
@@ -9,6 +10,10 @@ ja:
         password_confirmation: パスワードの確認
         password: パスワード
         email: メールアドレス
+      post:
+        airport_name: 空港名
+        prefecture: 県名
+        impression: 感想
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"

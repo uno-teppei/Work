@@ -19,7 +19,6 @@ class PostsController < ApplicationController
       flash[:notice] = "投稿を作成しました"
       redirect_to posts_path
     else
-      flash.now[:alert] = "投稿の作成に失敗しました"
       render :new
     end
   end
