@@ -22,8 +22,8 @@
         <%= f.text_area :impression, class:"input", placeholder: "感想等10文字以上入力" %>
       </div>
       <div class="post">
-        <%= f.label :images, "空港画像", class:"bold" %><br>
-        <%= f.file_field :images, multiple: true, class:"input" %>
+        <%= f.label :image, "空港画像", class:"bold" %><br>
+        <%= f.file_field :image, class:"input" %>
       </div>
       <div class="post">
         <%= f.submit "投稿する", class: "post-button" %>
