@@ -39,7 +39,7 @@
               <strong><% if current_user.status %> オンライン <% else %> オフライン <% end %></strong><i class="toggle fas fa-globe" aria-controls="user-status"></i>
             </div>
             <div class="online-content">
-              <%= form_with model: @user, url: users_edit_url(@user), action: :update, method: :post, id: 'user-status', class: 'is-hidden', local: true do |f| %>
+              <%= form_with model: @user, url: users_edit_url(@user), action: :update, method: :post, html: {id: 'user-status', class: 'is-hidden'}, local: true do |f| %>
                 <div class="field">
                   <%= f.select(:status, options_for_select([["オンライン", true], ["オフライン", false]]), {class: "select is-fullwidth"}) %>
                 </div>
@@ -65,7 +65,7 @@
                   <i class="toggle far fa-edit" aria-controls="user-about"></i>
                 </div>
                 <div class="user-content">
-                  <%= form_with model: @user, url: users_edit_url(@user), action: :update, method: :post, id: 'user-about', class: 'is-hidden', local: true do |f| %>
+                  <%= form_with model: @user, url: users_edit_url(@user), action: :update, method: :post, html: {id: 'user-about', class: 'is-hidden'}, local: true do |f| %>
                     <div class="field">
                       <%= f.text_area :about, autofocus: true, autocomplete: 'form', class: 'input'%>
                     </div>
