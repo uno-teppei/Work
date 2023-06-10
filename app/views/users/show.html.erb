@@ -1,51 +1,64 @@
 <section class="section">
   <div class="container">
-    <div class="column is-one-third">
-      <div class="contents is-multiline">
-        <div class="content is-full">
-          <!-- 画像 -->
-          <div class="card-content is-horizontal-center is-flex">
-            <figure class="image is-256x256">
-              <%= image_tag avatar_url(@user), class: "is-rounded" %>
-            </figure>
-          </div>
-          <!-- 画像アップロードボタン -->
-          <div class="image-content has-text-centered">
-            <p class="image-name">
-              <%= current_user.full_name %>
-            </p>
-            <hr class="line">
-          </div>
-          <!-- アカウント情報 -->
-          <article class="media">
-            <div class="media-content">アカウント登録日</div>
-            <div class="media-right">
-              <strong><%= I18n.l(current_user.created_at, format: :full_date) %></strong>
-            </div>
-          </article>
-          <hr class="line">
-          <!-- オンラインステータス -->
-          <article class="media">
-            <div class="media-content">ステータス</div>
-            <div class="media-right">
-              <strong><% if current_user.status %> オンライン <% else %> オフライン <% end %></strong><i class="toggle fas fa-globe" aria-controls="user-status"></i>
-            </div>
-          </article>
-        </div>
-        <div class="content is-full">
-          <div class="card">
-            <div class="card-content">
-              <!-- アカウント詳細 -->
-              <article class="media">
-                <div class="media-content">
-                  <p>
-                    <strong>自己紹介</strong>
-                    <br>
-                    <%= current_user.about %>
+    <div class="columns">  
+      <!-- 左パネル -->
+      <div class="column is-one-third">
+        <div class="columns is-multiline">
+          <!-- 上部 -->
+          <div class="column is-full">
+            <div class="card">
+              <!-- 画像 -->
+              <div class="card-content is-horizontal-center is-flex">
+                <figure class="image is-256x256">
+                  <%= image_tag avatar_url(@user), class: "is-rounded" %>
+                </figure>
+              </div>             
+              <div class="card-content">
+                <!-- 画像アップロードボタン -->
+                <div class="content has-text-centered">
+                  <p class="title is-5">
+                    <%= @user.full_name %>
                   </p>
                 </div>
-              </article>
-              <hr class="line">
+                <hr class="h-10">
+                <!-- アカウント情報 -->
+                <article class="media">
+                  <div class="media-content">アカウント登録日</div>
+                  <div class="media-right">
+                    <strong><%= I18n.l(@user.created_at, format: :full_date) %></strong>
+                  </div>
+                </article>
+                <hr class="h-10">            
+                <!-- オンラインステータス -->
+                <article>
+                  <div class="media">
+                    <div class="media-content">ステータス</div>
+                    <div class="media-right">
+                      <strong><% if @user.status %> オンライン <% else %> オフライン <% end %></strong>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          <!-- 下部 -->
+          <div class="column is-full">
+            <div class="card">
+              <div class="card-content">
+                <!-- アカウント詳細 -->
+                <article>
+                  <div class="media">
+                    <div class="media-content">
+                      <p>
+                        <strong>自己紹介</strong>
+                        <br>
+                        <%= @user.about %>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <hr class="h-10">
+              </div>
             </div>
           </div>
         </div>
