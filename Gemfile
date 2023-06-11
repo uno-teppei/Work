@@ -79,3 +79,6 @@ gem 'dotenv-rails'
 #画像アップロード
 gem 'carrierwave', '2.2.3'
 gem 'mini_magick'
+
+#デバッグ
+gem 'pry-byebug'
