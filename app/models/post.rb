@@ -2,7 +2,7 @@ class Post < ApplicationRecord
 
   belongs_to :user
 
-  mount_uploader :image, ImageUploader
+  has_many_attached :image
 
   validates :airport_name, presence: true
   validates :prefecture, presence: true
