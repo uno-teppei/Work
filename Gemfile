@@ -81,3 +81,6 @@ gem 'mini_magick'
 
 #デバッグ
 gem 'pry-byebug'
+
+#s3
+gem 'aws-sdk-s3'
