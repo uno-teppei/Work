@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-    if @post.save
+    if @post.save!
       flash[:notice] = "投稿を作成しました"
       redirect_to posts_path
     else
@@ -30,6 +30,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:id, :airport_name, :prefecture, :city, :impression, {images: []}).merge(user_id: current_user.id)
+    params.require(:post).permit(:id, :airport_name, :prefecture, :city, :impression, :image).merge(user_id: current_user.id)
   end
 end
