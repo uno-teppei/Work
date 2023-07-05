@@ -84,3 +84,6 @@ gem 'pry-byebug'
 
 #s3
 gem 'aws-sdk-s3'
+
+#google認証
+gem 'omniauth-google-oauth2'
