@@ -30,6 +30,7 @@
             <%= f.submit "登録する", class: "btn" %>
           </div>
         <% end %>
+        <%= link_to "Googleでユーザ登録", user_google_oauth2_omniauth_authorize_path, class: "button is-link is-fullwidth" %>
         <%= render "devise/shared/links" %>
       </div>
     </div>

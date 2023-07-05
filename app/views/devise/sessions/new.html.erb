@@ -24,6 +24,7 @@
             <%= f.submit "ログインする", class: "btn" %>
           </div>
         <% end %>
+        <%= link_to "Googleでログイン", user_google_oauth2_omniauth_authorize_path, class: "button is-link is-fullwidth" %>
         <%= render "devise/shared/links" %>    
       </div>
     </div>
