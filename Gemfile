@@ -87,3 +87,6 @@ gem 'aws-sdk-s3'
 
 #google認証
 gem 'omniauth-google-oauth2'
+
+#検索機能
+gem 'ransack'
