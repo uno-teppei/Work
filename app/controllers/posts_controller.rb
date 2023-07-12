@@ -28,8 +28,11 @@ class PostsController < ApplicationController
   end
 
   def search
-    @q = Post.ransack(params[:q])
-    @results = @q.result
+    if params[:word]
+      @posts = Post.where('airport_name LIKE ? OR prefecture LIKE ? OR city LIKE ? OR impression LIKE ?', "%#{params[:word]}%", "%#{params[:word]}%", "%#{params[:word]}%", "%#{params[:word]}%")
+    else
+      @posts = Post.all
+    end
   end
 
   private
