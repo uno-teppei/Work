@@ -27,6 +27,11 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def search
+    @q = Post.ransack(params[:q])
+    @results = @q.result
+  end
+
   private
 
   def post_params
