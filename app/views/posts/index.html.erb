@@ -2,6 +2,7 @@
   <h2>投稿済み一覧</h2>
   <table>
     <thead class="post-index">
+      <th>投稿者</th>
       <th>空港画像</th>
       <th>空港名</th>
       <th>県名</th>
@@ -11,6 +12,12 @@
     <tbody class="post-info">
       <% @posts.each do |post| %>
         <tr>
+          <td>
+            <figure class="image is-48x48">
+              <%= image_tag avatar_url(post.user.id), class: is-rounded %>
+            </figure>
+            <%= link_to "post.user.full_name", users_path(current_users.id) %>
+          </td>
           <td><%= image_tag post.image[0] %></td>
           <td><%= post.airport_name %></td>
           <td><%= post.prefecture %></td>
