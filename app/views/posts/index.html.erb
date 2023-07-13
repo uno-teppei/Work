@@ -14,9 +14,9 @@
         <tr>
           <td>
             <figure class="image is-48x48">
-              <%= image_tag avatar_url(post.user.id), class: is-rounded %>
+              <%= image_tag avatar_url(post.user), class: "is-rounded" %>
             </figure>
-            <%= link_to "post.user.full_name", users_path(current_users.id) %>
+            <%= link_to "post.user.full_name", users_path(@user) %>
           </td>
           <td><%= image_tag post.image[0] %></td>
           <td><%= post.airport_name %></td>
