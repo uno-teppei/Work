@@ -15,9 +15,7 @@
       </div>
     </div>
     <div class="navbar-end">
-      <a class="navbar-item"></a>
-      <a class="navbar-item"></a>
-      <!-- もしログインしていなかったら-->
+      <!-- もしログインしていなかったら -->
       <% if (!user_signed_in?) %>
         <div class="navbar-item">
           <div class="buttons">
@@ -25,7 +23,7 @@
             <%= link_to  "ログイン", new_user_session_path, class: "button is-warning is-inverted" %>
           </div>
         </div>
-      <!-- ログインしていたら　-->
+      <!-- ログインしていたら -->
       <% else %>
         <div class="navbar-item has-dropdown is-hoverable" style="margin-right: 100px;">
           <a class="navbar-item">
