@@ -58,6 +58,11 @@
   text-align: center;
 }
 
+.airport {
+  display: inline-block;
+  text-align: left;
+}
+
 #error_explanation {
   text-align: center;
   background-color: red;
@@ -115,6 +120,10 @@
 }
 //googleフォント
 .title {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.airport {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
