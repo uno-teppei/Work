@@ -77,6 +77,16 @@
   top: 15px;
 }
 
+.map-search{
+  text-align: center;
+  margin: 10px 30px;
+  padding: 10px 30px;
+}
+
+.map-search h1 {
+  font-size: 40px;
+}
+
 //投稿関連
 .section h2 {
   text-align: center;
@@ -129,6 +139,9 @@
 }
 
 .navbar-item {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.map-search {
   font-family: 'Noto Sans JP', sans-serif;
 }
 

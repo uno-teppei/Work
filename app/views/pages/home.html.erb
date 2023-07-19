@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<%= javascript_include_tag 'jquery.japan-map.min.js' %>
+  <div class="map-search">
+    <h1>都道府県から探す<h1>
+  </div>
+  <div id="map-container"></div>
+  <script>
+  $(function(){
+    $("#map-container").japanMap({
+        showsPrefectureName: false,
+        width: 1000,
+        movesIslands: true,
+        onSelect : function(data){
+            alert(data.name);
+        }
+      });
+  });
+  </script>
