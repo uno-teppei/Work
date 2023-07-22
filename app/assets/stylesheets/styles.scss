@@ -91,17 +91,38 @@
 //検索機能
 .search {
   position: relative;
-  top: 15px;
+  margin-top: 15px;
 }
 
-.map-search{
+.map-search {
   text-align: center;
   margin: 10px 30px;
   padding: 10px 30px;
 }
 
 .map-search h1 {
-  font-size: 40px;
+  font-size: 35px;
+}
+
+.airport-map {
+  text-align: center;
+}
+
+#address {
+  border-radius:25px;
+  outline:0;
+  background:#eee;
+}
+
+#sbtn {
+  background:#7fbfff;
+  color:#fff;
+  border:none;
+  border-radius:0 25px 25px 0;
+}
+
+#sbtn:hover {
+  color:#888;
 }
 
 //投稿関連
