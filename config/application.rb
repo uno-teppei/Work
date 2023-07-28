@@ -21,6 +21,5 @@ module Work
 
     # 標準時間を東京に設定
     config.time_zone = 'Tokyo'
-    
   end
 end
