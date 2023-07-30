@@ -9,6 +9,14 @@ class User < ApplicationRecord
 
   validates :full_name, presence: true, length: { maximum: 15 }
 
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |user|
+      user.full_name = "ゲスト"
+      user.password = SecureRandom.urlsafe_base64
+      user.password_confirmation = user.password
+    end
+  end
+
   def self.from_omniauth(auth)
     user = User.where(email: auth.info.email).first
     return user if user
