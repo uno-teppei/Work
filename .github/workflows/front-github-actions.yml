@@ -1,1 +1,19 @@
-
+name: front-github-actions
+on:
+  pull_request:
+    branches:
+      - work
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+      - name: install
+        run: yarn install
+      - name: ESLint
+        run: yarn fix:eslint
+      - name: Prettier
+        run: yarn fix:prettier

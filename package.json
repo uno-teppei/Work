@@ -16,5 +16,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3"
-  }
+  },
+  "fix:eslint": "eslint src --ext .js,.ts,.jsx,.tsx --fix",
+  "fix:prettier": "prettier --write ."
 }
