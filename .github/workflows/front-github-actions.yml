@@ -13,3 +13,7 @@ jobs:
           node-version: "16"
       - name: install
         run: yarn install
+      - name: Run rspec
+        run: bundle exec rspec
+      - name: Run rubocop
+        run: rubocop
