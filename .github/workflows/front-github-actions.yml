@@ -1,6 +1,6 @@
 name: front-github-actions
 on:
-  pull_request:
+  push:
     branches:
       - work
 jobs:
