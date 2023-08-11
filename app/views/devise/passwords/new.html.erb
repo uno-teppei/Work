@@ -1,0 +1,24 @@
+<div class="new-body">
+  <div class="container">
+    <div class="columns-center">
+      <div class="box">
+        <div class="field text-center">
+          <strong>パスワードをお忘れですか？</strong>
+        </div>
+        <br/>
+        <%= form_with model: @user, url: user_password_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+          <div class="field">
+            <%= f.label :メールアドレス, class: "label" %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレスを入力してください", class: "input" %>
+          </div>
+          <br/>
+          <div class="action">
+            <%= f.submit "パスワード再設定メールを送る", class: "password-btn" %>
+          </div>
+        <% end %>
+        <p class="resetting">メールに記載されているリンクをクリックするとパスワードの再設定ができます。</p>
+      </div>
+    </div>
+  </div>
+</div>

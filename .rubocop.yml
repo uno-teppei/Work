@@ -1,0 +1,29 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+  DisplayCopNames: true
+  Exclude:
+    - "app/**/*"
+    - "node_modules/node-sass/src/libsass/contrib/libsass.spec"
+    - "node_modules/node-sass/src/libsass/extconf.rb"
+    - "Gemfile"
+    - "db/schema.rb"
+    - "bin/**/*"
+    - "db/**/*"
+    - "log/**/*"
+    - "tmp/**/*"
+    - "vendor/**/*"
+    - "lib/tasks/auto_annotate_models.rake"
+    - "config/environments/*"
+    - "config/puma.rb"
+    - "spec/rails_helper.rb"
+    - "spec/spec_helper.rb"
+
+Layout/LineLength:
+  Enabled: false

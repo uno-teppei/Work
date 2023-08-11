@@ -1,0 +1,32 @@
+<section class="section">
+  <h2>投稿済み一覧</h2>
+  <table>
+    <thead class="post-index">
+      <th>投稿者</th>
+      <th>画像</th>
+      <th>空港名</th>
+      <th>県名</th>
+      <th>市名</th>
+      <th>コメント</th>
+    </thead>
+    <tbody class="post-info">
+      <% @posts.each do |post| %>
+        <tr>
+          <td>
+            <%= link_to user_path(post.user), class:"user" do %>
+              <figure class="image is-48x48">
+                <%= image_tag avatar_url(post.user), class: "is-rounded" %>
+              </figure>
+              <%= post.user.full_name %>
+            <% end %>
+          </td>
+          <td><%= image_tag post.image[0] %></td>
+          <td><%= post.airport_name %></td>
+          <td><%= post.prefecture %></td>
+          <td><%= post.city %></td>
+          <td><%= post.impression %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>

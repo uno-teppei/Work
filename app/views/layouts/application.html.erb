@@ -4,12 +4,36 @@
     <title>Work</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- googleフォント -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   </head>
 
   <body>
+    <!-- ナビゲーション -->
+    <%= render  "shared/navbar" %>
+
+    <!-- フラッシュメッセージ -->
+    <%= render 'shared/flash' %>
+
     <%= yield %>
+
+    <%= render  "shared/footer" %>
+
+    <script>
+      $(document).ready(() => {
+        $('.toggle').on('click', (e) => {
+          e.stopPropagation();
+          e.preventDefault();
+          $('#' + e.target.getAttribute('aria-controls')).toggleClass('is-hidden');
+        })
+      })
+    </script>
+    
   </body>
 </html>

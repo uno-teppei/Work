@@ -1,0 +1,33 @@
+<section class="section">
+  <div class="post-container">
+    <h2>空港情報投稿</h2>
+  
+    <%= form_with model: @post, url: posts_path, local: true do |f| %>
+      <%= render 'layouts/error_messages', model: f.object %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <div class="post">
+        <%= f.label :airport_name, "空港名", class:"bold" %><p class="required">(必須)</p><br>
+        <%= f.text_field :airport_name, class:"input", placeholder: "空港名入力" %>
+      </div>
+      <div class="post">
+        <%= f.label :prefecture, "都道府県", class:"bold" %><br>
+        <%= f.text_field :prefecture, class:"input", placeholder: "都道府県入力" %>
+      </div>
+      <div class="post">
+        <%= f.label :city, "市名", class:"bold" %><br>
+        <%= f.text_field :city, class:"input", placeholder: "市名入力" %>
+      </div>
+      <div class="post">
+        <%= f.label :impression, "感想等コメントを!", class:"bold" %><p class="required">(5文字以上必須)</p><br>
+        <%= f.text_area :impression, class:"input", placeholder: "感想等5文字以上入力" %>
+      </div>
+      <div class="post">
+        <%= f.label :image, "空港画像", class:"bold" %><p class="required">(必須)</p><br>
+        <%= f.file_field :image, class:"input" %>
+      </div>
+      <div class="post">
+        <%= f.submit "投稿する", class: "post-button" %>
+      </div>
+    <% end %>
+  </div>
+</section>

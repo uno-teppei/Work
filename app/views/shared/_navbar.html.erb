@@ -1,0 +1,77 @@
+<nav class="navbar has-background-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <h1>Go Airport</h1>
+    </a>
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item">
+      </div>
+    </div>
+    <div class="navbar-end">
+      <!-- もしログインしていなかったら -->
+      <% if (!user_signed_in?) %>
+        <div class="navbar-item">
+          <div class="buttons">
+            <%= link_to "Go Airportとは", page_path('airports'), class: "button is-white" %>
+            <%= link_to  "新規ユーザ登録", new_user_registration_path, class: "button is-white" %>
+            <%= link_to "ゲストログイン", users_guest_sign_in_path, class: "button is-warning is-inverted", method: :post %>
+            <%= link_to  "ログイン", new_user_session_path, class: "button is-warning is-inverted" %>
+          </div>
+        </div>
+      <!-- ログインしていたら -->
+      <% else %>
+        <div class="navbar-item has-dropdown is-hoverable" style="margin-right: 100px;">
+          <a class="navbar-item">
+            <figure class="image is-48x48 m-r-5">
+              <div style="margin-top: 0.6rem;">
+                <%= image_tag avatar_url(current_user), class: "is-rounded" %>
+              </div>
+            </figure>    
+            <%= current_user.full_name %>
+          </a>
+          <div class="navbar-dropdown">
+            <%= link_to  "ユーザ登録情報編集", edit_user_registration_path, class: "navbar-item" %>
+            <%= link_to 'プロフィール', character_path, class: "navbar-item" %>
+            <%= link_to "投稿する", new_post_path, class: "navbar-item" %>
+            <%= link_to "投稿一覧", posts_path, class: "navbar-item" %>
+            <hr class="navbar-divider">
+            <%= link_to  "ログアウト", destroy_user_session_path, method: :delete, class: "navbar-item" %>
+          </div>
+        </div>
+      <% end %>            
+    </div>
+  </div>
+</nav>
+
+<% if (user_signed_in?) %>
+  <nav class="navbar has-shadow" style="z-index: 3;">
+    <div class="container">
+      <div class="navbar-home">
+        <a class="home" href="/">
+          <h1>Home</h1>
+        </a>
+      </div>  
+      <div class="navbar">
+        <div class="search"><%= render "shared/search" %></div>
+      </div>
+    </div>
+  </nav>
+<% end %>
+
+<script>
+$(document).ready(function() {
+  // navbar burgerアイコンでクリックイベントを確認する
+  $(".navbar-burger").click(function() {
+    // 「navbar-burger」と「navbar-menu」の両方で「is-active」クラスを切り替える
+    $(".navbar-burger").toggleClass("is-active");
+    $(".navbar-menu").toggleClass("is-active");
+  });
+});
+</script>

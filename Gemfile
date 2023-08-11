@@ -12,7 +12,7 @@ gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -53,4 +53,50 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# rubocop
+group :development do
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+end
+
+# psych
 gem 'psych', '~> 3.1'
+
+# Bulma
+gem 'bulma-rails', '~> 0.9.4'
+gem 'bulma-extensions-rails', '~> 1.0.30'
+
+#デバイス
+gem 'devise'
+
+#日本語化
+gem 'rails-i18n'
+
+#環境変数
+gem 'dotenv-rails'
+
+#画像調整
+gem 'mini_magick'
+
+#デバッグ
+gem 'pry-byebug'
+
+#s3
+gem 'aws-sdk-s3'
+
+#google認証
+gem 'omniauth-google-oauth2'
+
+#検索機能
+gem 'ransack'
+
+#静的ページ作成
+gem 'high_voltage'
+
+#テスト
+group :development, :test do
+  gem 'rspec-rails', '~> 5.0.0'
+  gem 'factory_bot_rails'
+  gem 'webdrivers'
+end

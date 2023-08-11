@@ -1,0 +1,253 @@
+//devise関連
+.text-center {
+  text-align: center;
+  font-size: 25px;
+}
+
+.field-button {
+  text-align: center;
+}
+
+.btn {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 15px;
+  color: #000;
+  background-color: #00ff3c;
+  border-bottom: 5px solid #44cc00;
+}
+
+.btn:hover {
+  margin-top: 3px;
+  color: #000;
+  background: #0aff60;
+  border-bottom: 2px solid #00cc33;
+}
+
+.action {
+  text-align: center;
+}
+
+.password-btn {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  background-color: #ff003c;
+  border-bottom: 5px solid #cc0018;
+}
+.password-btn:hover {
+  margin-top: 3px;
+  color: white;
+  background-color: #ff003c;
+  border-bottom: 2px solid #cc0018;
+}
+
+.field-link {
+  text-align: center;
+}
+
+.all-link {
+  text-align: center;
+
+}
+
+.resetting {
+  text-align: center;
+}
+
+#error_explanation {
+  text-align: center;
+  background-color: red;
+}
+
+#error_explanation h2 {
+  color: white;
+}
+
+#error_explanation li {
+  color: white;
+}
+
+//概要説明
+.airport {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.service {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.airport-post {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.airport-posts {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.link-info {
+  text-align: center;
+}
+
+//リンク
+.navbar-home {
+  text-align: center;
+  padding-top: 12px;
+  padding-right: 10px;
+}
+
+//検索機能
+.search {
+  position: relative;
+  top: 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.map-search {
+  text-align: center;
+  margin: 10px 30px;
+  padding: 10px 30px;
+}
+
+.map-search h1 {
+  font-size: 35px;
+}
+
+.airport-map {
+  text-align: center;
+}
+
+#address {
+  border-radius:25px;
+  outline:0;
+  background:#eee;
+}
+
+#sbtn {
+  background:#7fbfff;
+  color:#fff;
+  border:none;
+  border-radius:0 25px 25px 0;
+}
+
+#sbtn:hover {
+  color:#888;
+}
+
+//投稿関連
+.section h2 {
+  padding-bottom: 25px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.post-index th {
+  text-align: center;
+  width:20%;
+}
+
+.post-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 15px;
+  color: #000;
+  background-color: #00ff3c;
+  border-bottom: 5px solid #44cc00;
+}
+
+.post-button:hover {
+  color: #000;
+  background: #0aff60;
+  border-bottom: 2px solid #00cc33;
+}
+
+//footer
+.footer-title {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+//googleフォント
+.title {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.airport {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.service {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.airport-post {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.airport-posts {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.btn {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.button {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.password-btn {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.resetting {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.home {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.post-button {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.field {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.navbar-item {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.map-search {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.all-link {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.input {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.section {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.footer-title {
+  font-family: 'Noto Sans JP', sans-serif;
+}
